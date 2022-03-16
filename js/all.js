@@ -1,6 +1,6 @@
 // TODO: 修正 ESLint 錯誤、補上分號、前輩說要改單引號 QQ
-/*eslint no-const-assign: "error"*/
-/*eslint-env es6*/
+/* eslint-env es6 */
+/* global axios */ 
 
 const url = 'https://hexschool.github.io/js-filter-data/data.json';
 let data;
@@ -28,14 +28,12 @@ function filterCategory(e) {
     // TODO: 之後拆成 renderData 函式
     let str = renderData(showData);
     table.innerHTML = str;
-  } else {
-
   }
 }
 
 function renderData(showData){
   let str = '';
-    showData.forEach((i, index) => {
+    showData.forEach((i) => {
       // TODO: 改成 ES6 的 Template Literals (字面字串符)
       const content = `
       <tr>
